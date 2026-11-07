@@ -1,4 +1,5 @@
 import { defineConfig } from '@lexibase/rdx'
+import { Logo } from './components/logo'
 
 export default defineConfig({
   description: 'Sightline: an in-game multi-monitor editor for American Truck Simulator and Euro Truck Simulator 2.',
@@ -12,18 +13,33 @@ export default defineConfig({
     since: 2026,
     // Set metadataBase to your public site URL for the sitemap and share images.
     // metadataBase: 'https://docs.example.com',
-    // Optional examples below: uncomment only after adding the referenced files.
-    // icons: {
-    //   icon: [
-    //     { url: '/icon.svg', type: 'image/svg+xml' },
-    //     { url: '/icon.png', sizes: '96x96', type: 'image/png' },
-    //   ],
-    //   shortcut: '/favicon.ico',
-    // },
-    // icon: browser tab icons with optional sizes and MIME types.
-    // shortcut: traditional favicon link for browser compatibility.
-    // manifest: '/site.webmanifest',
-    // The web app manifest describes its name, icons, etc.; RDX does not create it.
+    // Icons are rendered from public/images/icons/favicon.svg and app-icon.svg.
+    icons: {
+      // Browser tab icons with optional sizes and MIME types.
+      icon: [
+        { url: '/images/icons/favicon.svg', type: 'image/svg+xml' },
+        { url: '/images/icons/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      ],
+      // Traditional favicon link for browser compatibility.
+      shortcut: '/images/icons/favicon.ico',
+      // Home screen icon on iPhone and iPad.
+      apple: '/images/icons/apple-touch-icon.png',
+    },
+    // The web app manifest (name and icons when installed); RDX does not create it.
+    manifest: '/site.webmanifest',
+    // Link previews (Discord, forums): the app icon, square, so a small card.
+    openGraph: {
+      type: 'website',
+      siteName: 'Sightline',
+      images: [
+        {
+          url: '/images/icons/web-app-manifest-512x512.png',
+          width: 512,
+          height: 512,
+          alt: 'Sightline logo',
+        },
+      ],
+    },
   },
   // Floating heading navigation; shown only on pages with enough sections.
   TOC: true,
@@ -32,8 +48,7 @@ export default defineConfig({
   // Optional navbar text does not change metadata.applicationName.
   navbar: {
     title: 'Sightline', // Text beside the logo; empty or omitted shows only the logo.
-    // logo: '/images/logo.png', // File in public/images/; PNG, SVG and other image formats work.
-    // Or import your components/logo.tsx and set logo: Logo.
+    logo: Logo, // A React component that accepts className, not an image path.
     actions: {
       // The repository is private for now: show the link once it is public.
       github: {
@@ -49,6 +64,6 @@ export default defineConfig({
     enabled: false,
   },
   theme: {
-    defaultTheme: 'system',
+    defaultTheme: 'dark',
   },
 })
