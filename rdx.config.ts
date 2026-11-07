@@ -12,7 +12,7 @@ export default defineConfig({
     // Footer starting year. Change it to an earlier founding year if needed.
     since: 2026,
     // Set metadataBase to your public site URL for the sitemap and share images.
-    // metadataBase: 'https://docs.example.com',
+    metadataBase: 'https://sightline-releases.vercel.app',
     // Icons are rendered from public/images/icons/favicon.svg and app-icon.svg.
     icons: {
       // Browser tab icons with optional sizes and MIME types.
