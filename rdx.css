@@ -1,0 +1,10 @@
+/* Sightline cyan: the same colour the plugin uses to highlight the selected
+   view in the game (#28C8FF). The light theme uses a darker shade so links
+   stay readable on white. */
+:root {
+  --rdx-highlighting: #0a76a6;
+}
+
+.dark {
+  --rdx-highlighting: #28c8ff;
+}
