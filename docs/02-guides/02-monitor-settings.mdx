@@ -1,0 +1,78 @@
+---
+title: Monitor settings
+description: Every setting in a view's tab, what it does and its units.
+order: 2
+---
+
+In multi-monitor mode, each **view** (called a *monitor* in the game's file) is a separate camera drawn in its own rectangle of the game window. Each one has a tab in the **Monitors** section.
+
+## Change a value
+
+- **Drag** a slider left or right.
+- **Double-click** it, or :kbd[Ctrl] + click, to type an exact value. Press :kbd[Enter] to apply.
+- Hover over **(?)** for a short explanation.
+
+Most values apply as you drag. `normalized_width` and `normalized_height` apply when you release the slider, to avoid a stutter.
+
+## Position and size
+
+| Setting | Meaning |
+| :--- | :--- |
+| `normalized_x` | Left edge of the view (0 = left of the window, 1 = right) |
+| `normalized_y` | Top edge of the view (0 = top, larger values move it down) |
+| `normalized_width` | Width, as a fraction of the window |
+| `normalized_height` | Height, as a fraction of the window |
+
+The [on-screen editor](./01-on-screen-editor.mdx) is usually the easiest way to set these.
+
+## Direction
+
+| Setting | Unit | Meaning |
+| :--- | :--- | :--- |
+| `heading_offset` | degrees | Turns the view. **Positive turns left**, negative turns right. |
+| `pitch_offset` | degrees | Tilts the view up or down. |
+| `roll_offset` | degrees | Rotates the view around its centre. |
+| `horizontal_fov_relative_offset` | × FOV | Turns the view by a multiple of the primary view's field of view. `1` = one full view to the side. Added to the heading. |
+| `vertical_fov_relative_offset` | × FOV | The same, vertically. Added to the pitch. |
+
+## Field of view
+
+| Setting | Unit | Meaning |
+| :--- | :--- | :--- |
+| `horizontal_fov_override` | degrees | `0` uses the game's FOV. Any other value is used directly, and the vertical FOV follows the view's shape. |
+| `vertical_fov_override` | degrees | The same, starting from the vertical FOV. |
+
+## Camera position
+
+`camera_space_offset` moves this view's camera away from the normal position. It has three values:
+
+| Value | Negative | Positive |
+| :--- | :--- | :--- |
+| x | left | right |
+| y | down | up |
+| z | forward | back |
+
+The unit appears to be metres: `y = 3` raises the camera roughly the height of a truck.
+
+## Frustum
+
+`frustum_subrect_x`, `frustum_subrect_y`, `frustum_subrect_width` and `frustum_subrect_height` choose which part of the camera's image is drawn in the view (`0` to `1`). Changing them changes the image's proportions; correct that with the FOV settings.
+
+## Interior and exterior
+
+| Setting | Meaning |
+| :--- | :--- |
+| `render_interior` | Draws the cab interior. Turn it off for a camera outside the truck. |
+| `render_exterior` | Draws the world outside the cab. Meant for a view that only shows the dashboard. |
+
+> [!DANGER] Turning off render_exterior
+> Turning `render_exterior` off on a regular view **crashed the game** in testing. Sightline asks for confirmation first. Save your work before trying it.
+
+## Primary view, removing views
+
+- **Make primary** makes this view the base for the relative FOV offsets of the others. Usually the view in front of you. The first view in the file is marked *first in the file*.
+- **Remove** deletes the view after a confirmation. Like everything else, it is only written to the file when you press **Save**.
+
+## Add a view
+
+Open **Add monitor / start from a template**, type a **name** (letters, digits and `_`; `ui` is reserved by the game), set **x y width height**, and click **Add monitor**.

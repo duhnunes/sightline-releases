@@ -1,0 +1,60 @@
+---
+title: First steps
+description: Open the window, learn how input works and how saving works.
+order: 3
+---
+
+## Open and close the window
+
+Press :kbd[Ctrl + Shift + M] to open the **Sightline - multimon** window, and again to close it. You can also close it with the **×** in its title bar. To use another shortcut, see [Hotkey and settings](../02-guides/07-hotkey-and-settings.mdx).
+
+While the window is open:
+
+- **Your mouse and keyboard go to Sightline.** The camera does not turn and the truck does not react to keys.
+- **Your wheel, pedals and controllers stay with the game.** Sightline never touches them.
+- The game keeps running, so you see every change as you make it.
+
+## The window at a glance
+
+From top to bottom:
+
+| Section | What it is for |
+| :--- | :--- |
+| **Save**, **Revert to file**, **Restore backup**, **Refresh** | Keep or undo your changes |
+| **Profiles** | Save and load named layouts |
+| **Game UI position** | Where the HUD and menus are drawn |
+| **Monitors** | One tab per view, with all its settings |
+| **Add monitor / start from a template** | New views, the game's templates and the panorama |
+| Status line and **Hotkey** | The result of your last action, and the shortcut |
+
+Hover over any **(?)** to read what a setting does.
+
+## Changes are live, saving is not
+
+Every slider, checkbox and drag is applied to the game **immediately**, but your `multimon_config.sii` file is **not** changed. When something differs from the file, the window shows **unsaved changes**.
+
+| Button | What it does |
+| :--- | :--- |
+| **Save** | Writes the current layout to `multimon_config.sii`. The previous file is kept as a backup first. |
+| **Revert to file** | Throws away your live changes and loads what is saved in the file. |
+| **Restore backup** | Lists your backups and loads the one you pick. See [Profiles and backups](../02-guides/05-profiles-and-backups.mdx). |
+| **Refresh** | Reads the layout the game is using right now, for example after you typed a `multimon` command in the console. |
+
+> [!TIP]
+> Experiment freely. If you do not like the result, **Revert to file** brings back your saved layout. Changes you do not save are also gone when you restart the game.
+
+## Where Sightline keeps its files
+
+Everything Sightline writes lives in one folder inside the game's documents folder:
+
+```folder
+Documents/
+  American Truck Simulator/
+    multimon_config.sii
+    .sightline/
+      profiles/
+      backups/
+      settings.ini
+```
+
+The only file outside `.sightline` that Sightline changes is `multimon_config.sii`, and only when you press **Save**.

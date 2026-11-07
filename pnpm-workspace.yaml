@@ -1,0 +1,4 @@
+minimumReleaseAgeExclude:
+  - '@lexibase/rdx-next@5.1.2'
+  - '@lexibase/rdx-ui@3.5.3'
+  - '@lexibase/rdx@5.1.2'

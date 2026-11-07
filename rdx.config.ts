@@ -1,0 +1,54 @@
+import { defineConfig } from '@lexibase/rdx'
+
+export default defineConfig({
+  description: 'Sightline: an in-game multi-monitor editor for American Truck Simulator and Euro Truck Simulator 2.',
+  // HTML and interface language: 'en' or 'pt-BR'. Your documents stay as written.
+  lang: 'en',
+  // Site identity, SEO and link previews. '/' paths refer to files in public/.
+  metadata: {
+    // The single site name: browser titles, social previews and default branding.
+    applicationName: 'Sightline',
+    // Footer starting year. Change it to an earlier founding year if needed.
+    since: 2026,
+    // Set metadataBase to your public site URL for the sitemap and share images.
+    // metadataBase: 'https://docs.example.com',
+    // Optional examples below: uncomment only after adding the referenced files.
+    // icons: {
+    //   icon: [
+    //     { url: '/icon.svg', type: 'image/svg+xml' },
+    //     { url: '/icon.png', sizes: '96x96', type: 'image/png' },
+    //   ],
+    //   shortcut: '/favicon.ico',
+    // },
+    // icon: browser tab icons with optional sizes and MIME types.
+    // shortcut: traditional favicon link for browser compatibility.
+    // manifest: '/site.webmanifest',
+    // The web app manifest describes its name, icons, etc.; RDX does not create it.
+  },
+  // Floating heading navigation; shown only on pages with enough sections.
+  TOC: true,
+  // Local documentation search in the navbar; no external search service needed.
+  search: true,
+  // Optional navbar text does not change metadata.applicationName.
+  navbar: {
+    title: 'Sightline', // Text beside the logo; empty or omitted shows only the logo.
+    // logo: '/images/logo.png', // File in public/images/; PNG, SVG and other image formats work.
+    // Or import your components/logo.tsx and set logo: Logo.
+    actions: {
+      // The repository is private for now: show the link once it is public.
+      github: {
+        visible: false,
+        url: 'https://github.com/duhnunes/Sightline',
+      },
+      showToggleMode: true,
+    },
+  },
+  // When disabled, '/' redirects to '/docs'.
+  // Import your components/home.tsx and set homepage.component to use a custom page.
+  homepage: {
+    enabled: false,
+  },
+  theme: {
+    defaultTheme: 'system',
+  },
+})

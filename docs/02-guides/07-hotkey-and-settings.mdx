@@ -1,0 +1,45 @@
+---
+title: Hotkey and settings
+description: Change the shortcut that opens Sightline and the preferences it remembers.
+order: 7
+---
+
+## Change the hotkey
+
+At the bottom of the window, next to **Hotkey**, click **Change** and press the new combination. It works immediately and is remembered. Press :kbd[Esc] to cancel.
+
+The default is :kbd[Ctrl + Shift + M].
+
+> [!NOTE] The game does not see the hotkey
+> While the hotkey's modifier keys are held, Sightline hides its key from the game. Pressing :kbd[Ctrl + Shift + M] opens Sightline without opening the map, and :kbd[M] alone still opens the map.
+
+If you pick a key without modifiers, such as :kbd[Insert], that key is reserved for Sightline and the game never receives it.
+
+## settings.ini
+
+Sightline remembers its preferences in `Documents\<game>\.sightline\settings.ini`. You can also edit the file by hand; it starts with a short explanation of each line.
+
+```ini title="settings.ini"
+hotkey=Ctrl+Shift+M
+screens_across=1
+show_views=1
+```
+
+| Line | Meaning |
+| :--- | :--- |
+| `hotkey` | The shortcut that opens and closes the window |
+| `screens_across` | Physical screens side by side, for Eyefinity or Surround (1 to 6) |
+| `show_views` | Outline the views on the screen (`1` on, `0` off) |
+
+### Keys you can use
+
+Up to three modifiers, :kbd[Ctrl], :kbd[Shift] and :kbd[Alt], followed by one key:
+
+- letters `A` to `Z` and digits `0` to `9`
+- `F1` to `F24`
+- `Insert`, `Delete`, `Home`, `End`, `PageUp`, `PageDown`, `Pause`, `ScrollLock`
+- `Numpad0` to `Numpad9`
+
+Examples: `Ctrl+Shift+M`, `Alt+F10`, `Ctrl+Numpad5`. Upper or lower case and spaces do not matter.
+
+Edit the file with the game closed. If a hotkey cannot be read, Sightline uses the default and shows a message in the window, but keeps what you wrote so you can fix it.

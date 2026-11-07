@@ -1,0 +1,46 @@
+---
+title: On-screen editor
+description: Move and resize views by dragging them over the game, with snapping.
+order: 1
+---
+
+With the window open, every view is outlined on the game screen. The selected view is highlighted in blue with its name and values, and the others show a thin outline with their name. A yellow bar along the bottom edge shows where the HUD is.
+
+> [!NOTE]
+> The outlines are drawn only while the Sightline window is open. Turn them off with **Show views on screen** in the **Monitors** section.
+
+## Select a view
+
+Click a view on the screen to select it. Its tab opens in the **Monitors** section. A click without dragging only selects; it never changes anything.
+
+## Move a view
+
+Drag the **inside** of a view. It moves live, and the game follows smoothly.
+
+## Resize a view
+
+Drag an **edge** or a **corner**. While you drag, only the outline changes. The new size is applied when you **release** the mouse.
+
+> [!NOTE] Why only on release?
+> The game rebuilds a view's image every time its size changes, which makes it stutter for a moment. Applying the size once, on release, avoids a stutter on every mouse movement.
+
+## Snapping
+
+Edges stick when they come close to:
+
+- the edges and the middle of the game window,
+- the edges of your physical monitors,
+- the edges of the other views,
+- the left and right edges of the HUD,
+- where your screens meet, if you use [Eyefinity or Surround](./06-eyefinity-and-surround.mdx).
+
+A pink line shows what the view snapped to. Hold :kbd[Alt] while dragging to place a view freely.
+
+## Coordinates
+
+Positions and sizes are fractions of the game window, from `0` to `1`:
+
+- `normalized_x = 0` is the left edge, `1` is the right edge.
+- `normalized_y = 0` is the **top** edge, and larger values move the view down.
+
+Views stay inside the window while you drag them. Overlapping views are allowed; the game draws both.

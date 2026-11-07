@@ -1,0 +1,65 @@
+---
+title: Templates and panorama
+description: Start a layout from the game's templates or build a panorama of up to 360°.
+order: 4
+---
+
+Both tools are in **Add monitor / start from a template**. They replace your current layout, after a confirmation. As always, nothing is written to your file until you press **Save**.
+
+## Templates
+
+Pick one in **template** and click **Apply template**:
+
+| Template | Layout |
+| :--- | :--- |
+| `empty` | No views. Add your own. |
+| `one` | A single wide view. |
+| `three` | Three views side by side, built from your `r_multimon_*` settings. |
+| `three_with_dash` | Like `three`, plus a view for the dashboard. |
+
+Sightline puts the HUD across the whole screen after applying a template. See [HUD position](./03-hud.mdx) to change it.
+
+## Panorama
+
+A panorama is a row of views, each turned so that together they cover an angle of the horizon. The middle of the screen always looks straight ahead.
+
+| Setting | Meaning |
+| :--- | :--- |
+| **views** | How many views, from 2 to 4 |
+| **total angle** | How much of the horizon they cover together, up to 360° |
+| **camera offset** | The same `camera_space_offset` for every view (x right, y up, z back) |
+| **hide the cabin** | Turns off the cab interior in every view |
+
+Below the sliders, Sightline shows how many degrees each view covers. Click **Build panorama** to create it.
+
+### Examples
+
+:::tabs
+
+### 360° street view
+
+All the way around the truck, from above the cab:
+
+- **views**: 4
+- **total angle**: 360
+- **camera offset**: `0 3 0` (3 up)
+- **hide the cabin**: on
+
+### Three screens
+
+A starting point for three screens around your seat:
+
+- **views**: 3
+- **total angle**: 180
+
+Then fine-tune each view in its tab.
+
+:::
+
+> [!WARNING] Performance
+> Every view is drawn separately, so 4 views cost roughly 4 times the GPU work of one.
+
+> [!NOTE] Bent lines at the seams
+> Straight lines, such as roads or power lines, bend where two views meet. That is expected: each view is a flat camera pointing in its own direction.
+
+A single view cannot cover 179° or more, so for example 360° needs at least 3 views.

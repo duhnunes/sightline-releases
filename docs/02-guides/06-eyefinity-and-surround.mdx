@@ -1,0 +1,26 @@
+---
+title: Eyefinity and Surround
+description: Snap views to your screens when they are joined into one display.
+order: 6
+---
+
+AMD Eyefinity and NVIDIA Surround join several monitors into a single large display. The game and Windows then see **one** monitor, for example 3840 × 1080 for two Full HD screens, and Sightline cannot tell where one screen ends and the next begins.
+
+## Tell Sightline how many screens you have
+
+In the **Monitors** section, set **Physical screens side by side** to the number of screens in your group.
+
+- Orange dashed lines appear where the screens meet.
+- Views snap to those lines while you drag them.
+- The setting is remembered between sessions.
+
+Leave it at `1` if you do not use Eyefinity or Surround. Separate monitors are detected automatically.
+
+## Limits
+
+- The width is divided **evenly**, which is right when all screens have the same resolution. Their aspect ratio does not matter: 16:9 and 21:9 both work.
+- With **bezel compensation** turned on, part of the image is hidden behind the bezels, so the lines are slightly off. SCS's own [multi-monitor documentation](https://eurotrucksimulator2.com/multimon_config.php) recommends turning it off in the graphics driver.
+- Groups of screens with different resolutions are not supported.
+
+> [!TIP]
+> Screens with the same resolution but different physical sizes still divide correctly in pixels, but an image that continues from one screen to the next looks larger on the bigger screen. Adjust each view's FOV if that bothers you.

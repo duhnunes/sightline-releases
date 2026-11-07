@@ -1,0 +1,75 @@
+---
+title: Installation
+description: Requirements, installing the plugin and turning on custom multi-monitor mode.
+order: 2
+---
+
+## Requirements
+
+- **American Truck Simulator** or **Euro Truck Simulator 2**, 64-bit, on Windows.
+- The **DirectX 11** renderer, which is the game's default. Sightline does not work with DirectX 12 or OpenGL.
+- The game's **custom multi-monitor mode** (`r_multimon_mode 4`). The steps below turn it on.
+
+> [!NOTE]
+> Tested on ATS 1.62.1.1 with one monitor and with two monitors in AMD Eyefinity. Euro Truck Simulator 2 uses the same engine and is supported, but it has not been tested yet.
+
+## Install
+
+::::steps
+
+### Close the game
+
+The multi-monitor mode can only be changed while the game is closed.
+
+### Turn on custom multi-monitor mode
+
+Open `config.cfg` in your game's documents folder:
+
+:::tabs
+
+### ATS
+
+`Documents\American Truck Simulator\config.cfg`
+
+### ETS2
+
+`Documents\Euro Truck Simulator 2\config.cfg`
+
+:::
+
+Find the `r_multimon_mode` line and set it to `4`:
+
+```
+uset r_multimon_mode "4"
+```
+
+### Copy the plugin
+
+Copy `sightline.dll` to the `plugins` folder inside the game's installation folder. Create the `plugins` folder if it does not exist.
+
+```
+<game folder>\bin\win_x64\plugins\sightline.dll
+```
+
+For Steam, the game folder is usually `C:\Program Files (x86)\Steam\steamapps\common\American Truck Simulator`.
+
+### Start the game
+
+The game shows a notice when it loads SDK plugins. Accept it to continue.
+
+### Open Sightline
+
+When you are in the game, press :kbd[Ctrl + Shift + M].
+
+::::
+
+> [!TIP] Already using multi-monitor mode?
+> If `r_multimon_mode` is already `4`, Sightline picks up your current layout the first time you open it. Nothing changes until you press **Save**.
+
+## Updating
+
+Close the game and replace `sightline.dll` with the new version. Your profiles, backups and settings are kept.
+
+## Uninstalling
+
+Delete `sightline.dll` from the `plugins` folder. Your `multimon_config.sii` stays as you last saved it. To remove Sightline's files too, delete the `.sightline` folder in the game's documents folder.
