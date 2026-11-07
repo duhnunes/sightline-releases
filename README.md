@@ -29,4 +29,5 @@ Requires Node.js 22.18+ or 24.11+.
 
 ## License
 
-[MIT](LICENSE)
+- **Sightline (the plugin you download):** free to use, under the Sightline License included in every download. Please share the link to the [releases page](../../releases) rather than re-uploading the files.
+- **This documentation site:** [MIT](LICENSE).
