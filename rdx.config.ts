@@ -50,10 +50,10 @@ export default defineConfig({
     title: 'Sightline', // Text beside the logo; empty or omitted shows only the logo.
     logo: Logo, // A React component that accepts className, not an image path.
     actions: {
-      // The repository is private for now: show the link once it is public.
+      // The public repository: documentation and release downloads.
       github: {
-        visible: false,
-        url: 'https://github.com/duhnunes/Sightline',
+        visible: true,
+        url: 'https://github.com/duhnunes/sightline-releases',
       },
       showToggleMode: true,
     },

@@ -1,80 +1,32 @@
-# web
+<div align="center">
+  <img src="./public/images/icons/web-app-manifest-192x192.png" width="128" alt="Sightline logo" />
+  <h1>Sightline</h1>
+  <p>An in-game multi-monitor editor for American Truck Simulator and Euro Truck Simulator 2</p>
+</div>
 
-This documentation site was created with RDX.
+> **Unofficial community project.** Sightline is not affiliated with or endorsed by SCS Software. Euro Truck Simulator 2, American Truck Simulator and SCS Software are trademarks of their respective owners.
 
-Requires Node.js 22.18+ (22.x) or 24.11+ (24.x). Use the latest patch of either line.
+Sightline lets you build and tune your multi-monitor setup from inside the game: move sliders and drag your views on the screen, and every change applies live. No console commands, no restarts.
 
-## Development
+## Download
 
-Use the same package manager that installed the project:
+Get `sightline.dll` from the [latest release](../../releases/latest), then follow the [installation guide](docs/01-getting-started/02-installation.mdx).
+
+## Documentation
+
+The user guide lives in [`docs/`](docs) and is published as a website. It covers installation, the on-screen editor, every monitor setting, the HUD, templates and panoramas, profiles and backups, Eyefinity and Surround, the hotkey, troubleshooting and known limitations.
+
+## This repository
+
+This repository holds the documentation site and the release downloads. The site is built with [RDX](https://rdx-tool.vercel.app/).
 
 ```bash
+pnpm install
 pnpm dev
-# npm alternative: npm run dev
-# Yarn alternative: yarn dev
 ```
 
-Edit files in `docs/` to create your documentation. RDX creates and maintains
-its internal runtime in `.rdx/`.
+Requires Node.js 22.18+ or 24.11+.
 
-- Start with `docs/01-getting-started/writing-pages.mdx` for page setup, sidebar ordering,
-  and `rdx check`.
-- Browse `docs/02-examples/` for working Markdown components, including Steps.
-- Use **Copy this page** on any document to copy its Markdown, or open
-  `/docs/llms.txt` for an index of the published documentation.
+## License
 
-Keep custom React components in `components/` and import them from
-`rdx.config.ts` or `components/home.tsx`. The project-root `tsconfig.json` configures JSX
-and bundler-style imports for these files, including inside a monorepo.
-If installation failed during creation, keep these files, fix the reported error
-and retry `pnpm install` (or `npm install` / `yarn install`) before starting.
-
-## Updating RDX
-
-Update the framework with `pnpm add @lexibase/rdx@latest` (or `npm install`
-/ `yarn add` with the same package). Review release notes for migrations, restart
-development, and rebuild production. Optional plugins are updated separately.
-
-## Optional versioning
-
-```bash
-pnpm rdx add versioning
-pnpm rdx version 1.0.0
-```
-
-The first command installs the official plugin, activates it in `rdx.config.ts`
-and prepares the runtime. It preserves existing options and validates the
-configuration before saving it, without creating backup files. Restart `pnpm dev` afterward. Repeated
-activation does not duplicate the plugin or upgrade its installed version.
-If the configuration is too dynamic to edit safely, follow the manual
-instructions printed by the CLI. Installing a package alone does not activate it.
-
-## Public files
-
-Put images and downloads in the project-root `public/` folder:
-
-```text
-public/images/rdx.svg        → /images/rdx.svg
-public/downloads/example.txt → /downloads/example.txt
-```
-
-Write pages as `.md` or `.mdx` inside `docs/`. Both formats support RDX's
-Markdown components. Use site-root URLs for assets:
-
-```md
-![RDX logo](/images/rdx.svg)
-
-[Download](/downloads/example.txt)
-```
-
-See `docs/02-examples/images.mdx` for a working example. Do not include `/public`
-in URLs and do not store private files or credentials in this directory.
-
-RDX connects `.rdx/public` to this folder automatically. Keep your files in
-`public/`; `.rdx/` is generated. All documentation versions share public files;
-use version-specific filenames if snapshots need to retain their original assets.
-
-For production, run `pnpm build` and `pnpm start`. Restart/redeploy the site after
-adding or removing public files in production. Deploy `public/` with the project,
-not just `.rdx/`. If the filesystem does not support directory links, RDX reports
-an error without deleting the original assets.
+[MIT](LICENSE)
