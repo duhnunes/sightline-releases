@@ -56,7 +56,7 @@
 /* Illustrations. They show the game screen and the plugin's own window, which
    are dark in both site themes, with the colours the plugin draws:
    selected view #28C8FF, other views #DCDCDC, snap line #FF50C8, HUD #FFC83C,
-   screen seams #FFA028 (src/app.cpp), window greys and amber (src/theme.cpp). */
+   screen seams #FFA028 (src/app.cpp), window greys and the cyan accent (src/theme.cpp). */
 .sl-home .sl-scene {
   display: block;
   width: 100%;
@@ -113,7 +113,7 @@
   stroke: #28c8ff;
 }
 .sl-home .sl-truck {
-  fill: #f0aa14;
+  fill: #dcdcdc;
 }
 .sl-home .sl-display {
   fill: #232c35;
@@ -174,10 +174,10 @@
     repeating-linear-gradient(#1c1c1d 0 22px, #2a2a2b 22px 26px);
   padding: 10px;
 }
-.sl-home .sl-amber-button {
-  background: #f0aa14;
+.sl-home .sl-primary-button {
+  background: #28c8ff;
   padding: 8px 14px;
-  color: #1a1a1a;
+  color: #0b1216;
   font-size: 12px;
   font-weight: 700;
   text-align: center;

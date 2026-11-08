@@ -206,7 +206,7 @@ function Surround() {
 function ModeButton() {
   return (
     <div className="sl-dimmed" aria-label="The Sightline window, dimmed, with one button">
-      <span className="sl-amber-button">Turn on multimon mode (restarts the game)</span>
+      <span className="sl-primary-button">Turn on multimon mode (restarts the game)</span>
     </div>
   )
 }
