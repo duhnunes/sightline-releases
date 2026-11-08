@@ -1,5 +1,6 @@
 import { defineConfig } from '@lexibase/rdx'
 import { Logo } from './components/logo'
+import Home from './components/home'
 
 export default defineConfig({
   description: 'Sightline: an in-game multi-monitor editor for American Truck Simulator and Euro Truck Simulator 2.',
@@ -58,10 +59,10 @@ export default defineConfig({
       showToggleMode: true,
     },
   },
-  // When disabled, '/' redirects to '/docs'.
-  // Import your components/home.tsx and set homepage.component to use a custom page.
+  // The landing page at '/': components/home.tsx (video, features, download).
   homepage: {
-    enabled: false,
+    enabled: true,
+    component: Home,
   },
   theme: {
     defaultTheme: 'dark',
