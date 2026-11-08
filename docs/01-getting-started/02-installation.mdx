@@ -8,7 +8,6 @@ order: 2
 
 - **American Truck Simulator** or **Euro Truck Simulator 2**, 64-bit, on Windows.
 - The **DirectX 11** renderer, which is the game's default. Sightline does not work with DirectX 12 or OpenGL.
-- The game's **custom multi-monitor mode** (`r_multimon_mode 4`). The steps below turn it on.
 
 > [!NOTE]
 > Tested on ATS 1.62.1.1 with one monitor and with two monitors in AMD Eyefinity. Euro Truck Simulator 2 uses the same engine and is supported, but it has not been tested yet.
@@ -19,29 +18,7 @@ order: 2
 
 ### Close the game
 
-The multi-monitor mode can only be changed while the game is closed.
-
-### Turn on custom multi-monitor mode
-
-Open `config.cfg` in your game's documents folder:
-
-:::tabs
-
-### ATS
-
-`Documents\American Truck Simulator\config.cfg`
-
-### ETS2
-
-`Documents\Euro Truck Simulator 2\config.cfg`
-
-:::
-
-Find the `r_multimon_mode` line and set it to `4`:
-
-```
-uset r_multimon_mode "4"
-```
+The game only loads plugins when it starts.
 
 ### Copy the plugin
 
@@ -61,10 +38,19 @@ The game shows a notice when it loads SDK plugins. Accept it to continue.
 
 When you are in the game, press :kbd[Ctrl + Shift + M].
 
+### Turn on multi-monitor mode
+
+Sightline edits the game's **custom multi-monitor mode**. If it is off, the window is dimmed and shows a single button: **Turn on multimon mode (restarts the game)**.
+
+Click it. The game saves your progress, closes, and Steam starts it again a moment later, already in the right mode. Open Sightline again and start editing.
+
 ::::
 
 > [!TIP] Already using multi-monitor mode?
-> If `r_multimon_mode` is already `4`, Sightline picks up your current layout the first time you open it. Nothing changes until you press **Save**.
+> If your game is already in custom multi-monitor mode, there is no button: Sightline picks up your current layout the first time you open it. Nothing changes until you press **Save**.
+
+> [!NOTE] Not using Steam?
+> Sightline asks Steam to start the game again. If your copy of the game is not on Steam, it still turns the mode on and closes the game; just start it again yourself.
 
 ## Updating
 
@@ -72,4 +58,4 @@ Close the game and replace `sightline.dll` with the new version. Your profiles, 
 
 ## Uninstalling
 
-Delete `sightline.dll` from the `plugins` folder. Your `multimon_config.sii` stays as you last saved it. To remove Sightline's files too, delete the `.sightline` folder in the game's documents folder.
+Delete `sightline.dll` and `sightline.ini` from the `plugins` folder. Your `multimon_config.sii` stays as you last saved it. To remove Sightline's files too, delete the `.sightline` folder in the game's documents folder.

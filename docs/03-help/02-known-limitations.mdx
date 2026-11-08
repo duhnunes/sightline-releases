@@ -6,14 +6,15 @@ order: 2
 
 ## Game behaviour
 
-- **Turning off `render_exterior` on a regular view crashes the game.** Sightline asks for confirmation first.
-- **Changing a view's size makes the game stutter briefly.** Sizes are applied when you release the slider or edge.
-- **`r_multimon_mode` cannot change while the game runs.** Set it in `config.cfg` with the game closed.
+- **Turning off World outside on a regular view crashes the game.** Sightline asks for confirmation first.
+- **Changing a view's position or size from its fields, or its size on the screen, makes the game stutter briefly.** Those are applied when you release the mouse.
+- **The multi-monitor mode only changes when the game starts.** That is why turning it on restarts the game.
 - **Straight lines bend where two views meet.** Each view is a flat camera; this is normal in panoramas and multi-screen setups.
 
 ## Sightline
 
 - Works only with the **DirectX 11** renderer.
 - **Tested** on American Truck Simulator 1.62.1.1, with one monitor and with two monitors in AMD Eyefinity. Euro Truck Simulator 2 and three-screen setups are supported but **not tested yet**.
-- With Eyefinity or Surround, screens must have the same resolution for **Physical screens side by side** to line up, and bezel compensation should be off.
+- Restarting the game after turning on the multi-monitor mode goes through **Steam**. Other copies of the game have to be started again by hand.
+- With Eyefinity or Surround, screens must have the same resolution for **Screens side by side** to line up, and bezel compensation should be off.
 - A game update may change things Sightline relies on. If editing is disabled after an update, look for a new version.

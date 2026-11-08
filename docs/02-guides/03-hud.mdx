@@ -4,22 +4,22 @@ description: Choose where the HUD and the game's menus are drawn.
 order: 3
 ---
 
-The HUD (speedometer, mirrors, navigation) and the game's menus are drawn in one horizontal band of the window. Its position is set in **Game UI position**:
-
-| Setting | Meaning |
-| :--- | :--- |
-| `normalized_ui_x` | Left edge of the HUD (0 = left of the window) |
-| `normalized_ui_width` | Width of the HUD, as a fraction of the window |
+The HUD (speedometer, mirrors, navigation) and the game's menus are drawn in one horizontal band of the window. Set it on the **HUD** page.
 
 The yellow bar at the bottom of the screen shows the HUD's current span while the window is open.
 
-## Full screen
+## Quick places
 
-**Full screen** puts the HUD across the whole window (`x 0`, `width 1`). This is Sightline's default: the templates and the panorama use it too.
+| Button | Where the HUD goes |
+| :--- | :--- |
+| **Whole window** | Across the whole game window. Sightline's default: the templates and the panorama use it too. |
+| **Centre third** | The middle third. With three screens, the gauges and mirrors stay on the screen in front of you. |
 
-> [!TIP] Three screens around you?
-> With three screens, the game puts the HUD on the centre third so the gauges and mirrors stay in front of you. To do the same, set `normalized_ui_x` to `0.3333` and `normalized_ui_width` to `0.3333`.
+## Position
 
-## Keep the HUD inside the window
+| Setting | Unit | Meaning |
+| :--- | :--- | :--- |
+| **Left** | % | Left edge of the HUD, from the left of the window |
+| **Width** | % | Width of the HUD |
 
-The HUD and the views must stay inside `0` to `1`. Sightline keeps the sliders in that range.
+The HUD must stay inside the window: **Left** plus **Width** cannot go past `100 %`.

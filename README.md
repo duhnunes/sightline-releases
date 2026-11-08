@@ -10,11 +10,11 @@ Sightline lets you build and tune your multi-monitor setup from inside the game:
 
 ## Download
 
-Get `sightline.dll` from the [latest release](../../releases/latest), then follow the [installation guide](docs/01-getting-started/02-installation.mdx).
+Get `Sightline.zip` from the [latest release](../../releases/latest), or straight from [sightline-releases.vercel.app/download](https://sightline-releases.vercel.app/download), then follow the [installation guide](docs/01-getting-started/02-installation.mdx).
 
 ## Documentation
 
-The user guide lives in [`docs/`](docs) and is published as a website. It covers installation, the on-screen editor, every monitor setting, the HUD, templates and panoramas, profiles and backups, Eyefinity and Surround, the hotkey, troubleshooting and known limitations.
+The user guide lives in [`docs/`](docs) and is published as a website. It covers installation, the on-screen editor, every view setting, the HUD, templates and panoramas, profiles and backups, Eyefinity and Surround, the hotkey, troubleshooting and known limitations.
 
 ## This repository
 

@@ -4,33 +4,34 @@ description: Start a layout from the game's templates or build a panorama of up 
 order: 4
 ---
 
-Both tools are in **Add monitor / start from a template**. They replace your current layout, after a confirmation. As always, nothing is written to your file until you press **Save**.
+Both are on the **Start from...** page. They replace your current views, after a confirmation. **Undo** brings the old ones back, and nothing is written to your file until you press **Save**.
 
 ## Templates
 
-Pick one in **template** and click **Apply template**:
+Click one of the buttons:
 
 | Template | Layout |
 | :--- | :--- |
-| `empty` | No views. Add your own. |
-| `one` | A single wide view. |
-| `three` | Three views side by side, built from your `r_multimon_*` settings. |
-| `three_with_dash` | Like `three`, plus a view for the dashboard. |
+| **One view** | A single view across the whole game window. |
+| **Three screens** | Left, centre and right views, from the game's own triple-screen settings. |
+| **Three screens with dashboard** | The game's triple-screen layout with a dashboard view. |
+| **Empty** | No views at all. Add your own with **+** on the **Layout** page. |
 
-Sightline puts the HUD across the whole screen after applying a template. See [HUD position](./03-hud.mdx) to change it.
+Sightline puts the HUD across the whole window after applying a template. See [HUD position](./03-hud.mdx) to change it.
 
 ## Panorama
 
-A panorama is a row of views, each turned so that together they cover an angle of the horizon. The middle of the screen always looks straight ahead.
+A panorama is a row of views, each turned so that together they cover part of the horizon. The middle of the screen always looks straight ahead.
 
 | Setting | Meaning |
 | :--- | :--- |
-| **views** | How many views, from 2 to 4 |
-| **total angle** | How much of the horizon they cover together, up to 360° |
-| **camera offset** | The same `camera_space_offset` for every view (x right, y up, z back) |
-| **hide the cabin** | Turns off the cab interior in every view |
+| **Views** | How many views, from 2 to 4 |
+| **Total angle** | How much of the horizon they cover together, up to 360° |
+| **Each view covers** | Shown for you: the total angle divided by the views |
+| **Camera sideways**, **up / down**, **forward / back** | Moves every view's camera, in metres |
+| **Hide the cabin** | Turns off the cab interior in every view |
 
-Below the sliders, Sightline shows how many degrees each view covers. Click **Build panorama** to create it.
+Click **Build panorama** to create it.
 
 ### Examples
 
@@ -40,19 +41,19 @@ Below the sliders, Sightline shows how many degrees each view covers. Click **Bu
 
 All the way around the truck, from above the cab:
 
-- **views**: 4
-- **total angle**: 360
-- **camera offset**: `0 3 0` (3 up)
-- **hide the cabin**: on
+- **Views**: 4
+- **Total angle**: 360°
+- **Camera up / down**: 3 m
+- **Hide the cabin**: on
 
 ### Three screens
 
 A starting point for three screens around your seat:
 
-- **views**: 3
-- **total angle**: 180
+- **Views**: 3
+- **Total angle**: 180°
 
-Then fine-tune each view in its tab.
+Then fine-tune each view on the **Layout** page.
 
 :::
 

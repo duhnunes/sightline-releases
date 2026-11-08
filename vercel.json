@@ -3,5 +3,12 @@
   "framework": "nextjs",
   "installCommand": "pnpm install --frozen-lockfile",
   "buildCommand": "pnpm build",
-  "outputDirectory": ".rdx/.next"
+  "outputDirectory": ".rdx/.next",
+  "redirects": [
+    {
+      "source": "/download",
+      "destination": "https://github.com/duhnunes/sightline-releases/releases/latest/download/Sightline.zip",
+      "permanent": false
+    }
+  ]
 }

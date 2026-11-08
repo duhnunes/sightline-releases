@@ -4,14 +4,14 @@ description: Move and resize views by dragging them over the game, with snapping
 order: 1
 ---
 
-With the window open, every view is outlined on the game screen. The selected view is highlighted in blue with its name and values, and the others show a thin outline with their name. A yellow bar along the bottom edge shows where the HUD is.
+With the window open, every view is outlined on the game screen. The selected view is highlighted in cyan with its name, position and size in percent; the others show a thin outline with their name. A yellow bar along the bottom edge shows where the HUD is.
 
 > [!NOTE]
-> The outlines are drawn only while the Sightline window is open. Turn them off with **Show views on screen** in the **Monitors** section.
+> The outlines are drawn only while the Sightline window is open. Turn them off with **Show the views** on the **Settings** page.
 
 ## Select a view
 
-Click a view on the screen to select it. Its tab opens in the **Monitors** section. A click without dragging only selects; it never changes anything.
+Click a view on the screen to select it. Its tab opens on the **Layout** page. A click without dragging only selects; it never changes anything.
 
 ## Move a view
 
@@ -36,11 +36,11 @@ Edges stick when they come close to:
 
 A pink line shows what the view snapped to. Hold :kbd[Alt] while dragging to place a view freely.
 
-## Coordinates
+## Positions and sizes
 
-Positions and sizes are fractions of the game window, from `0` to `1`:
+Positions and sizes are percentages of the game window:
 
-- `normalized_x = 0` is the left edge, `1` is the right edge.
-- `normalized_y = 0` is the **top** edge, and larger values move the view down.
+- **Left** `0 %` is the left edge of the window, `100 %` the right edge.
+- **Top** `0 %` is the **top** edge, and larger values move the view down.
 
 Views stay inside the window while you drag them. Overlapping views are allowed; the game draws both.

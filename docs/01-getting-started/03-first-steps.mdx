@@ -1,12 +1,12 @@
 ---
 title: First steps
-description: Open the window, learn how input works and how saving works.
+description: Open the window, find your way around its pages and learn how saving works.
 order: 3
 ---
 
 ## Open and close the window
 
-Press :kbd[Ctrl + Shift + M] to open the **Sightline - multimon** window, and again to close it. You can also close it with the **×** in its title bar. To use another shortcut, see [Hotkey and settings](../02-guides/07-hotkey-and-settings.mdx).
+Press :kbd[Ctrl + Shift + M] to open the **Sightline** window, and again to close it. You can also close it with the **×** in its title bar. To use another shortcut, see [Hotkey and settings](../02-guides/07-hotkey-and-settings.mdx).
 
 While the window is open:
 
@@ -14,34 +14,46 @@ While the window is open:
 - **Your wheel, pedals and controllers stay with the game.** Sightline never touches them.
 - The game keeps running, so you see every change as you make it.
 
-## The window at a glance
+The window remembers where you left it, its size and the page you were on.
 
-From top to bottom:
+## The pages
 
-| Section | What it is for |
+The menu on the left opens one page at a time:
+
+| Page | What it is for |
 | :--- | :--- |
-| **Save**, **Revert to file**, **Restore backup**, **Refresh** | Keep or undo your changes |
+| **Layout** | One tab per view, with all its settings. **+** adds a view. |
+| **Start from...** | The game's templates and the panorama builder |
+| **HUD** | Where the HUD and menus are drawn |
 | **Profiles** | Save and load named layouts |
-| **Game UI position** | Where the HUD and menus are drawn |
-| **Monitors** | One tab per view, with all its settings |
-| **Add monitor / start from a template** | New views, the game's templates and the panorama |
-| Status line and **Hotkey** | The result of your last action, and the shortcut |
+| **Backups** | Copies of your file from before each Save |
+| **Settings** | The hotkey, the outlines on the screen, Eyefinity and Surround |
 
-Hover over any **(?)** to read what a setting does.
+Hover over the **name** of any setting to read what it does. The small diamond at the end of the name means there is help to read.
+
+## Working with values
+
+- **Drag** a field left or right. While you drag, the mouse pointer is hidden and stays put, so you can keep going past the edge of the screen. It comes back where it was when you let go.
+- **Double-click** a field, or :kbd[Ctrl] + click it, to type an exact value. Press :kbd[Enter] to apply.
+- A **reset button** (a circular arrow) appears at the end of a field you have changed. Click it to put that one value back, either as it is saved in your file or to its default. Hover over it to see which value it goes back to.
 
 ## Changes are live, saving is not
 
-Every slider, checkbox and drag is applied to the game **immediately**, but your `multimon_config.sii` file is **not** changed. When something differs from the file, the window shows **unsaved changes**.
+Every change is applied to the game **immediately**, but your `multimon_config.sii` file is **not** changed. While something differs from the file, the bottom of the window shows **● Unsaved** and the **Save** button turns amber.
+
+The buttons at the top of every page:
 
 | Button | What it does |
 | :--- | :--- |
-| **Save** | Writes the current layout to `multimon_config.sii`. The previous file is kept as a backup first. |
-| **Revert to file** | Throws away your live changes and loads what is saved in the file. |
-| **Restore backup** | Lists your backups and loads the one you pick. See [Profiles and backups](../02-guides/05-profiles-and-backups.mdx). |
-| **Refresh** | Reads the layout the game is using right now, for example after you typed a `multimon` command in the console. |
+| **Undo**, **Redo** | Step back and forward through your changes. Also :kbd[Ctrl + Z], and :kbd[Ctrl + Y] or :kbd[Ctrl + Shift + Z]. |
+| **...** | **Revert to the saved file** throws away your live changes. **Read again from the game** picks up changes you made in the game's console. |
+| **Save** | Writes the current layout to `multimon_config.sii`. A copy of the old file is kept first. |
 
 > [!TIP]
-> Experiment freely. If you do not like the result, **Revert to file** brings back your saved layout. Changes you do not save are also gone when you restart the game.
+> Experiment freely. **Undo** steps back one change at a time, and **Revert to the saved file** brings back your saved layout at once. Changes you do not save are also gone when you restart the game.
+
+> [!NOTE]
+> Undo, Redo and Revert reload the whole layout, so the game may stutter once.
 
 ## Where Sightline keeps its files
 
@@ -55,6 +67,9 @@ Documents/
       profiles/
       backups/
       settings.ini
+      sightline.log
 ```
 
-The only file outside `.sightline` that Sightline changes is `multimon_config.sii`, and only when you press **Save**.
+Only the window's position is kept elsewhere, in `sightline.ini` next to the plugin. There is nothing to edit in it.
+
+The only file outside these that Sightline changes is `multimon_config.sii`, and only when you press **Save** or restore a backup.

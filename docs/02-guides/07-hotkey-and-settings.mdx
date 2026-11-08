@@ -6,7 +6,7 @@ order: 7
 
 ## Change the hotkey
 
-At the bottom of the window, next to **Hotkey**, click **Change** and press the new combination. It works immediately and is remembered. Press :kbd[Esc] to cancel.
+On the **Settings** page, click the button next to **Open / close Sightline**, which shows the current shortcut, and press the new combination. It works immediately and is remembered. Press :kbd[Esc] to cancel.
 
 The default is :kbd[Ctrl + Shift + M].
 
@@ -15,12 +15,21 @@ The default is :kbd[Ctrl + Shift + M].
 
 If you pick a key without modifiers, such as :kbd[Insert], that key is reserved for Sightline and the game never receives it.
 
+## Other settings
+
+| Setting | Page | Meaning |
+| :--- | :--- | :--- |
+| **Show the views** | Settings | Outline the views on the game screen |
+| **Screens side by side** | Settings | Physical screens in an Eyefinity or Surround group (1 to 6) |
+| **Copies to keep** | Backups | How many copies of your file to keep, one per Save (1 to 100) |
+
 ## settings.ini
 
-Sightline remembers its preferences in `Documents\<game>\.sightline\settings.ini`. You can also edit the file by hand; it starts with a short explanation of each line.
+Sightline remembers its preferences in `Documents\<game>\.sightline\settings.ini`. You never need to open it, but you can edit it by hand; it starts with a short explanation of each line.
 
 ```ini title="settings.ini"
 hotkey=Ctrl+Shift+M
+max_backups=7
 screens_across=1
 show_views=1
 ```
@@ -28,6 +37,7 @@ show_views=1
 | Line | Meaning |
 | :--- | :--- |
 | `hotkey` | The shortcut that opens and closes the window |
+| `max_backups` | Copies of `multimon_config.sii` to keep (1 to 100, default 7) |
 | `screens_across` | Physical screens side by side, for Eyefinity or Surround (1 to 6) |
 | `show_views` | Outline the views on the screen (`1` on, `0` off) |
 

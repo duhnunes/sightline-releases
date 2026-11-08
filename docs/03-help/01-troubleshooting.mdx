@@ -11,45 +11,49 @@ order: 1
 - Check that `sightline.dll` is in `<game folder>\bin\win_x64\plugins\`.
 - Check that the game uses the **DirectX 11** renderer. Sightline does not work with DirectX 12 or OpenGL.
 - Make sure the game window is in front: the hotkey only works while the game has focus.
-- If you changed the hotkey, the current one is shown at the bottom of the window and in `settings.ini`.
+- If you changed the hotkey, it is in `settings.ini`. See [Hotkey and settings](../02-guides/07-hotkey-and-settings.mdx).
 - Open the game console: Sightline prints a line starting with `[sightline]` when it loads, with the hotkey it is using.
 
-### The window says "Custom multimon mode is off"
+### The window is dark with only one button
 
-The game is not in custom multi-monitor mode. Close the game, set `uset r_multimon_mode "4"` in `config.cfg`, and start it again. The mode cannot be changed while the game is running. See [Installation](../01-getting-started/02-installation.mdx).
+The game is not in custom multi-monitor mode, which Sightline needs. Click **Turn on multimon mode (restarts the game)**: the game saves your progress, closes, and Steam starts it again. See [Installation](../01-getting-started/02-installation.mdx).
+
+### The game closed but did not start again
+
+Steam starts the game again a moment after it has fully closed. If that does not happen, for example because your copy is not on Steam, start the game yourself: the multi-monitor mode is already on. If it keeps happening, report it with the log files.
 
 ### The window says the game console could not be found
 
-Sightline could not connect to the game's command system, usually after a game update it does not know yet. Editing is disabled to keep the game safe. Look for an update of Sightline and include `sightline.log` if you report it.
+Sightline could not connect to the game's command system, usually after a game update it does not know yet. Editing is disabled to keep the game safe. Look for an update of Sightline and include the log files if you report it.
 
-### The game froze for a moment when I changed a size
+### The game froze for a moment when I changed a view
 
-That is the game rebuilding the view's image. It happens once per size change. Sightline applies sizes only when you release the slider or the edge to keep it to one stutter.
+That is the game rebuilding the view's image. Sightline applies positions and sizes from the fields, and sizes from the screen, only when you release the mouse, to keep it to one stutter. **Undo**, **Redo** and **Revert** reload the whole layout and may stutter once too.
 
-### The game crashed when I turned off render_exterior
+### The game crashed when I turned off World outside
 
-That is a known game crash with `render_exterior` turned off on a regular view. Avoid it, or only use it on a view that shows nothing but the dashboard.
+That is a known game crash with **World outside** (`render_exterior`) turned off on a regular view. Avoid it, or only use it on a view that shows nothing but the dashboard.
 
 ### My layout is gone after restarting the game
 
-Live changes are kept only until the game closes. Press **Save** to write them to `multimon_config.sii`. If you saved by mistake, use **Restore backup**.
+Live changes are kept only until the game closes. Press **Save** to write them to `multimon_config.sii`. If you saved by mistake, restore a copy from the **Backups** page.
 
 ### The outlines do not match my screens with Eyefinity or Surround
 
-Set **Physical screens side by side** to the number of screens in your group. See [Eyefinity and Surround](../02-guides/06-eyefinity-and-surround.mdx).
+Set **Screens side by side** on the **Settings** page to the number of screens in your group. See [Eyefinity and Surround](../02-guides/06-eyefinity-and-surround.mdx).
 
 ### A key in my hotkey also does something in the game
 
-That should not happen while the hotkey's modifier keys are held. If it does, change the hotkey to another combination and report it, with `sightline.log`.
+That should not happen while the hotkey's modifier keys are held. If it does, change the hotkey to another combination and report it, with the log files.
 
 ::::
 
-## The log file
+## The log files
 
-Sightline writes what it does to `sightline.log`, next to the plugin:
+Sightline writes what it does to `sightline.log`, next to its other files:
 
 ```
-<game folder>\bin\win_x64\plugins\sightline.log
+Documents\<game>\.sightline\sightline.log
 ```
 
 The previous session's log is kept as `sightline.prev.log`. Attach both when you report a problem.

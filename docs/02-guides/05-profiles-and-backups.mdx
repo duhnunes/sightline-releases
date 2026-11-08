@@ -6,20 +6,21 @@ order: 5
 
 ## Profiles
 
-A profile is a saved layout with a name, such as *Triple screens* or *Street view*. Use the **Profiles** section:
+A profile is a saved layout with a name, such as *Triple screens* or *Street view*. Use the **Profiles** page. Click a profile in the list to select it; the selected one is highlighted in cyan.
 
 | Action | How |
 | :--- | :--- |
-| Save the current layout | Type a name and click **Save as profile**. If the name exists, Sightline asks before replacing it. |
+| Save the current layout | Type a name under **Save the current layout** and click **Save as profile**. If the name exists, Sightline asks before replacing it. |
 | Load a profile | Select it and click **Load**. It is applied immediately. |
-| Replace a profile with the current layout | Select it and click **Update**. |
+| Replace a profile with the current layout | Select it and click **Replace with current**. |
 | Delete a profile | Select it and click **Delete**. It goes to the Recycle Bin. |
 | See profiles copied in by hand | Click **Rescan**. |
+| Find the files | Click **Open folder**. |
 
 Names can use letters, digits, spaces, `-` and `_`, up to 40 characters.
 
 > [!NOTE] Loading is not saving
-> **Load** shows the profile in the game, but your `multimon_config.sii` is not changed until you press **Save**. That way you can try a profile and go back with **Revert to file**.
+> **Load** shows the profile in the game, but your `multimon_config.sii` is not changed until you press **Save**. That way you can try a profile and go back with **Undo**.
 
 ### Share a profile
 
@@ -33,12 +34,14 @@ Send that file to a friend. They copy it into the same folder on their computer 
 
 ## Backups
 
-Sightline makes backups automatically:
+Sightline keeps copies of your file automatically:
 
-- **Original**: the first time you open Sightline, it keeps a copy of your `multimon_config.sii` from before you used it.
-- **Before every Save**: the file as it was before you saved. The 10 newest are kept.
+- **Original**: the first time you open Sightline, it keeps a copy of your `multimon_config.sii` from before you used it. This one is never deleted.
+- **Before every Save**: the file as it was before you saved. The 7 newest are kept; change that with **Copies to keep**.
 - **Before every restore**: the current file, so a restore can be undone too.
 
-To go back to one of them, click **Restore backup**, pick it from the list and click **Restore**. That one **does** replace your `multimon_config.sii`, and it is applied to the game immediately.
+To go back to one of them, open the **Backups** page, click a copy in the list and click **Restore selected**. That one **does** replace your `multimon_config.sii`, and it is applied to the game immediately.
 
-Backups are in `Documents\<game>\.sightline\backups\`.
+**Delete** sends the selected copy to the Recycle Bin. The original cannot be deleted from Sightline.
+
+Backups are in `Documents\<game>\.sightline\backups\`. **Open folder** takes you there.
