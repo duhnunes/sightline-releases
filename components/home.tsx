@@ -232,7 +232,10 @@ const STEPS: [title: string, text: ReactNode][] = [
 
 export default function Home() {
   return (
-    <div className="sl-home">
+    // relative: keeps the sr-only heading positioned inside the scrolling
+    // main; without it, it is placed against <body> and stretches the page,
+    // giving a second scrollbar outside the site.
+    <div className="sl-home relative">
       {/* Hero */}
       <section className="px-4 pt-14 pb-12 text-center sm:pt-20">
         <Logo className="mx-auto size-20 sm:size-24" />
