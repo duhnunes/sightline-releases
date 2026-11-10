@@ -10,7 +10,7 @@ Sightline lets you build and tune your multi-monitor setup from inside the game:
 
 ## Download
 
-Get `Sightline.zip` from the [latest release](../../releases/latest), or straight from [sightline-releases.vercel.app/download](https://sightline-releases.vercel.app/download), then follow the [installation guide](docs/01-getting-started/02-installation.mdx).
+Get `Sightline.zip` from the [latest release](../../releases/latest), or straight from [docs.duhnunes.dev/sightline/download](https://docs.duhnunes.dev/sightline/download), then follow the [installation guide](docs/01-getting-started/02-installation.mdx).
 
 ## Documentation
 

@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { withBasePath, type RdxHomepageProps } from '@lexibase/rdx'
 
 import { Logo } from './logo'
 import { Video } from './video'
@@ -7,8 +8,9 @@ import { Video } from './video'
 // and every value on it matches the plugin as released: names, units, colours
 // and limits are the ones the window and the docs use.
 
+// Paths inside the site; link() adds the deployment prefix (basePath in
+// rdx.config.ts), which plain <a> tags do not get on their own.
 const DOWNLOAD = '/download' // vercel.json: the latest release's Sightline.zip
-const DOCS = '/docs'
 const RELEASES = 'https://github.com/duhnunes/sightline-releases/releases'
 const GITHUB = 'https://github.com/duhnunes/sightline-releases'
 const VERSION = '0.2.0'
@@ -230,7 +232,9 @@ const STEPS: [title: string, text: ReactNode][] = [
   ],
 ]
 
-export default function Home() {
+export default function Home({ basePath, docsHref }: RdxHomepageProps) {
+  const link = (path: string) => withBasePath(path, basePath)
+  const DOCS = link(docsHref)
   return (
     // relative: keeps the sr-only heading positioned inside the scrolling
     // main; without it, it is placed against <body> and stretches the page,
@@ -248,7 +252,7 @@ export default function Home() {
           live, save when it looks right.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href={DOWNLOAD} className="sl-button sl-button-primary">
+          <a href={link(DOWNLOAD)} className="sl-button sl-button-primary">
             {ICONS.download} Download
           </a>
           <a href={DOCS} className="sl-button">
@@ -349,7 +353,7 @@ export default function Home() {
           ))}
         </ol>
         <p className="mt-6 text-center text-sm">
-          <a href="/docs/getting-started/installation" className="font-medium text-(--rdx-highlighting) hover:underline">
+          <a href={link("/docs/getting-started/installation")} className="font-medium text-(--rdx-highlighting) hover:underline">
             Full installation guide →
           </a>
         </p>
@@ -375,7 +379,7 @@ export default function Home() {
           Ready to see more of the road?
         </h2>
         <p className="mt-3 text-muted-foreground">Get Sightline for ATS and ETS2. It is free.</p>
-        <a href={DOWNLOAD} className="sl-button sl-button-primary mt-6">
+        <a href={link(DOWNLOAD)} className="sl-button sl-button-primary mt-6">
           {ICONS.download} Download Sightline
         </a>
       </section>

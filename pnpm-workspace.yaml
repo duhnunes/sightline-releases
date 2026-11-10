@@ -1,4 +1,4 @@
+# RDX is our own framework: its new releases are trusted right away
+# (same rule as scs-intellisense). Every other package keeps the age policy.
 minimumReleaseAgeExclude:
-  - '@lexibase/rdx-next@5.1.2'
-  - '@lexibase/rdx-ui@3.5.3'
-  - '@lexibase/rdx@5.1.2'
+  - '@lexibase/*'

@@ -6,8 +6,13 @@
   "outputDirectory": ".rdx/.next",
   "redirects": [
     {
-      "source": "/download",
+      "source": "/sightline/download",
       "destination": "https://github.com/duhnunes/sightline-releases/releases/latest/download/Sightline.zip",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "destination": "/sightline",
       "permanent": false
     }
   ]

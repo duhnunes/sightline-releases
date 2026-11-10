@@ -3,6 +3,9 @@ import { Logo } from './components/logo'
 import Home from './components/home'
 
 export default defineConfig({
+  // Served at docs.duhnunes.dev/sightline: the duhnunes.dev router rewrites
+  // /sightline/* to this project. Every page and file lives under this prefix.
+  basePath: '/sightline',
   description: 'Sightline: an in-game multi-monitor editor for American Truck Simulator and Euro Truck Simulator 2.',
   // HTML and interface language: 'en' or 'pt-BR'. Your documents stay as written.
   lang: 'en',
@@ -13,7 +16,7 @@ export default defineConfig({
     // Footer starting year. Change it to an earlier founding year if needed.
     since: 2026,
     // Set metadataBase to your public site URL for the sitemap and share images.
-    metadataBase: 'https://sightline-releases.vercel.app',
+    metadataBase: 'https://docs.duhnunes.dev',
     // Icons are rendered from public/images/icons/favicon.svg and app-icon.svg.
     icons: {
       // Browser tab icons with optional sizes and MIME types.
@@ -59,7 +62,7 @@ export default defineConfig({
       showToggleMode: true,
     },
   },
-  // The landing page at '/': components/home.tsx (video, features, download).
+  // The landing page at '/sightline': components/home.tsx (video, features, download).
   homepage: {
     enabled: true,
     component: Home,
