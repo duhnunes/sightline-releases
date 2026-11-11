@@ -27,7 +27,7 @@ The menu on the left opens one page at a time:
 | **HUD** | Where the HUD and menus are drawn |
 | **Profiles** | Save and load named layouts |
 | **Backups** | Copies of your file from before each Save |
-| **Settings** | The hotkey, the outlines on the screen, Eyefinity and Surround |
+| **Settings** | The hotkey, the outlines on the screen, Eyefinity and Surround, and turning multi-monitor mode off |
 
 Hover over the **name** of any setting to read what it does. The small diamond at the end of the name means there is help to read.
 
@@ -36,6 +36,7 @@ Hover over the **name** of any setting to read what it does. The small diamond a
 - **Drag** a field left or right. While you drag, the mouse pointer is hidden and stays put, so you can keep going past the edge of the screen. It comes back where it was when you let go.
 - **Double-click** a field, or :kbd[Ctrl] + click it, to type an exact value. Press :kbd[Enter] to apply.
 - A **reset button** (a circular arrow) appears at the end of a field you have changed. Click it to put that one value back, either as it is saved in your file or to its default. Hover over it to see which value it goes back to.
+- When Sightline asks before doing something, a click outside the question or :kbd[Esc] is the same as **Cancel**: nothing changes.
 
 ## Changes are live, saving is not
 
@@ -72,4 +73,4 @@ Documents/
 
 Only the window's position is kept elsewhere, in `sightline.ini` next to the plugin. There is nothing to edit in it.
 
-The only file outside these that Sightline changes is `multimon_config.sii`, and only when you press **Save** or restore a backup.
+The only file outside these that Sightline changes is `multimon_config.sii`, and only when you press **Save** or restore a backup. Turning multi-monitor mode on or off also changes one of the game's own settings (`r_multimon_mode`), which the game keeps in its `config.cfg`.
