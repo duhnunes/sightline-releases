@@ -54,11 +54,8 @@ export default defineConfig({
     title: 'Sightline', // Text beside the logo; empty or omitted shows only the logo.
     logo: Logo, // A React component that accepts className, not an image path.
     actions: {
-      // The public repository: documentation and release downloads.
-      github: {
-        visible: false,
-        url: '',
-      },
+      // No GitHub link in the navbar: an omitted action stays hidden (an
+      // empty url is refused by RDX 6.3.1, even with visible: false).
       showToggleMode: true,
     },
   },
