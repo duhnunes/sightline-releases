@@ -56,8 +56,8 @@ export default defineConfig({
     actions: {
       // The public repository: documentation and release downloads.
       github: {
-        visible: true,
-        url: 'https://github.com/duhnunes/sightline-releases',
+        visible: false,
+        url: '',
       },
       showToggleMode: true,
     },
