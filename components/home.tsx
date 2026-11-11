@@ -13,7 +13,7 @@ import { Video } from './video'
 const DOWNLOAD = '/download' // vercel.json: the latest release's Sightline.zip
 const RELEASES = 'https://github.com/duhnunes/sightline-releases/releases'
 const GITHUB = 'https://github.com/duhnunes/sightline-releases'
-const VERSION = '0.2.0'
+const VERSION = '0.3.0'
 // The YouTube id of the video, once it is published. Empty: a placeholder.
 const VIDEO_ID = ''
 
