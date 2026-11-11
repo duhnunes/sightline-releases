@@ -6,18 +6,22 @@ order: 5
 
 ## Profiles
 
-A profile is a saved layout with a name, such as *Triple screens* or *Street view*. Use the **Profiles** page. Click a profile in the list to select it; the selected one is highlighted in cyan.
+A profile is a saved layout with a name, such as *Triple screens* or *Street view*. Open the **Profiles** page: each profile is a row with a small drawing of its views, its name and a summary such as *3 views · HUD centre third*.
 
 | Action | How |
 | :--- | :--- |
-| Save the current layout | Type a name under **Save the current layout** and click **Save as profile**. If the name exists, Sightline asks before replacing it. |
-| Load a profile | Select it and click **Load**. It is applied immediately. |
-| Replace a profile with the current layout | Select it and click **Replace with current**. |
-| Delete a profile | Select it and click **Delete**. It goes to the Recycle Bin. |
-| See profiles copied in by hand | Click **Rescan**. |
-| Find the files | Click **Open folder**. |
+| Save the current layout | Click **+ Save current layout**, type a name and press **Enter** (or click **Save**). **Esc** cancels. |
+| Load a profile | Click **Load** on its row, or double-click the row. It is applied immediately. |
+| Update a profile with the current layout | **...** on its row, then **Update with current layout**. Sightline asks in the row before replacing it. |
+| Rename a profile | **...** on its row, then **Rename**. Type the new name and press **Enter**; **Esc** keeps the old one. |
+| Delete a profile | **...** on its row, then **Delete**. Sightline asks in the row first; the file goes to the Recycle Bin. |
+| Find a profile's file | **...** on its row, then **Show in folder**. **Open folder** at the bottom opens the whole folder. |
 
-Names can use letters, digits, spaces, `-` and `_`, up to 40 characters.
+Names can use letters, digits, spaces, `-` and `_`, up to 40 characters, and two profiles cannot share a name.
+
+### Which profile is running
+
+The profile the game is running has a cyan bar on the left and the label **ACTIVE**. Sightline finds it by comparing layouts, so it is marked even after you restart the game. When you change something after loading a profile, the label turns to **ACTIVE · CHANGED**: **Reload** brings the profile back, and **Update with current layout** keeps your changes in it.
 
 > [!NOTE] Loading is not saving
 > **Load** shows the profile in the game, but your `multimon_config.sii` is not changed until you press **Save**. That way you can try a profile and go back with **Undo**.
@@ -30,7 +34,7 @@ Every profile is a normal `multimon_config.sii` file in:
 Documents\<game>\.sightline\profiles\<name>.sii
 ```
 
-Send that file to a friend. They copy it into the same folder on their computer and click **Rescan**.
+Send that file to a friend. They copy it into the same folder on their computer, and it appears in the list within a few seconds.
 
 ## Backups
 
