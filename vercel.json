@@ -11,9 +11,9 @@
       "permanent": false
     },
     {
-      "source": "/",
-      "destination": "/sightline",
-      "permanent": false
+      "source": "/:path((?!sightline(?:/|$)).*)",
+      "destination": "https://docs.duhnunes.dev/sightline/:path",
+      "permanent": true
     }
   ]
 }
