@@ -1,4 +1,4 @@
-/* Sightline cyan: the same colour the plugin uses to highlight the selected
+/* Sightline cyan: the same color the plugin uses to highlight the selected
    view in the game (#28C8FF). The light theme uses a darker shade so links
    stay readable on white. */
 :root {
@@ -54,9 +54,9 @@
 }
 
 /* Illustrations. They show the game screen and the plugin's own window, which
-   are dark in both site themes, with the colours the plugin draws:
+   are dark in both site themes, with the colors the plugin draws:
    selected view #28C8FF, other views #DCDCDC, snap line #FF50C8, HUD #FFC83C,
-   screen seams #FFA028 (src/app.cpp), window greys and the cyan accent (src/theme.cpp). */
+   screen seams #FFA028 (src/app.cpp), window grays and the cyan accent (src/theme.cpp). */
 .sl-home .sl-scene {
   display: block;
   width: 100%;
@@ -125,7 +125,7 @@
   stroke-dasharray: 6 6;
 }
 
-/* The plugin's window, in miniature (src/theme.cpp colours). */
+/* The plugin's window, in miniature (src/theme.cpp colors). */
 .sl-home .sl-window {
   display: grid;
   gap: 4px;

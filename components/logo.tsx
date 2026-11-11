@@ -1,5 +1,5 @@
-// Sightline logo for the navbar: three screens in an arc, the centre one lit.
-// The centre follows the site's highlight colour (rdx.css), so it matches the
+// Sightline logo for the navbar: three screens in an arc, the center one lit.
+// The center follows the site's highlight color (rdx.css), so it matches the
 // theme; the side screens use the darker Sightline blue.
 export const Logo = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" className={className} role="img" aria-label="Sightline">

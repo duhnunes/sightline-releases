@@ -5,7 +5,7 @@ import { Logo } from './logo'
 import { Video } from './video'
 
 // The landing page at "/" (homepage.component in rdx.config.ts). Every claim
-// and every value on it matches the plugin as released: names, units, colours
+// and every value on it matches the plugin as released: names, units, colors
 // and limits are the ones the window and the docs use.
 
 // Paths inside the site; link() adds the deployment prefix (basePath in
@@ -145,7 +145,7 @@ function Fields() {
     ['Up / down', '3.00 m', true],
   ]
   return (
-    <div className="sl-window" aria-label="Fields of a view, in degrees and metres">
+    <div className="sl-window" aria-label="Fields of a view, in degrees and meters">
       {rows.map(([name, value, changed]) => (
         <div key={name} className="sl-row">
           <span className="sl-row-name">{name}</span>
@@ -292,7 +292,7 @@ export default function Home({ basePath, docsHref }: RdxHomepageProps) {
           <Card
             icon={ICONS.sliders}
             title="Plain names, plain units"
-            text="Turn, tilt and field of view in degrees, position in percent, camera in metres. Every change applies live, and any field resets in one click."
+            text="Turn, tilt and field of view in degrees, position in percent, camera in meters. Every change applies live, and any field resets in one click."
           >
             <Fields />
           </Card>
@@ -327,7 +327,7 @@ export default function Home({ basePath, docsHref }: RdxHomepageProps) {
               <li>Profiles you switch in a second and share as plain .sii files</li>
               <li>A copy of your file before every Save</li>
               <li>The game&apos;s templates, from one view to three screens</li>
-              <li>The HUD across the whole window or on the centre screen</li>
+              <li>The HUD across the whole window or on the center screen</li>
             </ul>
             <a href={DOCS} className="mt-4 inline-block text-sm font-medium text-(--rdx-highlighting) hover:underline">
               See every feature →
