@@ -40,12 +40,20 @@ Send that file to a friend. They copy it into the same folder on their computer,
 
 Sightline keeps copies of your file automatically:
 
-- **Original**: the first time you open Sightline, it keeps a copy of your `multimon_config.sii` from before you used it. This one is never deleted.
-- **Before every Save**: the file as it was before you saved. The 7 newest are kept; change that with **Copies to keep**.
+- **Original**: the first time you open Sightline, it keeps a copy of your `multimon_config.sii` from before you used it. It is marked **KEPT** and is never deleted.
+- **Before every Save**: the file as it was before you saved. The 7 newest are kept; change that with **Copies to keep** at the top of the page.
 - **Before every restore**: the current file, so a restore can be undone too.
 
-To go back to one of them, open the **Backups** page, click a copy in the list and click **Restore selected**. That one **does** replace your `multimon_config.sii`, and it is applied to the game immediately.
+Open the **Backups** page. Each copy is a row with a drawing of its views, when it was made (*Today, 00:35*, *Yesterday, 21:10*, *7 Nov, 11:57*) and a summary.
 
-**Delete** sends the selected copy to the Recycle Bin. The original cannot be deleted from Sightline.
+| Action | How |
+| :--- | :--- |
+| Go back to a copy | Click **Restore** on its row, or double-click the row. Sightline asks in the row first. |
+| Keep a copy as a profile | **...** on its row, then **Save as profile**. Type a name and press **Enter**. |
+| Find a copy's file | **...** on its row, then **Show in folder**. **Open folder** at the bottom opens the whole folder. |
+| Delete a copy | **...** on its row, then **Delete**. It goes to the Recycle Bin. The original has no Delete. |
 
-Backups are in `Documents\<game>\.sightline\backups\`. **Open folder** takes you there.
+> [!WARNING] Restore replaces your file
+> Unlike **Load** on a profile, **Restore** writes the copy to your `multimon_config.sii` and applies it to the game immediately. Your current file is copied first, so you can restore it back.
+
+Backups are in `Documents\<game>\.sightline\backups\`.
