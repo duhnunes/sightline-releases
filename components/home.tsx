@@ -11,7 +11,7 @@ import { Video } from './video'
 // Paths inside the site; link() adds the deployment prefix (basePath in
 // rdx.config.ts), which plain <a> tags do not get on their own.
 const DOWNLOAD = '/download' // vercel.json: the latest release's Sightline.zip
-const VERSION = '0.3.0'
+const VERSION = '0.3.1'
 // The YouTube id of the video, once it is published. Empty: a placeholder.
 const VIDEO_ID = ''
 
@@ -357,8 +357,7 @@ export default function Home({ basePath, docsHref }: RdxHomepageProps) {
         <ul className="mx-auto flex max-w-4xl flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
           <li>Windows, 64-bit</li>
           <li>DirectX 11 renderer</li>
-          <li>ATS: tested on 1.62</li>
-          <li>ETS2: supported, not tested yet</li>
+          <li>ATS and ETS2: tested on 1.62</li>
           <li>Free</li>
         </ul>
       </section>
