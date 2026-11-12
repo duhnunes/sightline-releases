@@ -1,0 +1,32 @@
+---
+title: Is it safe?
+description: What Sightline does on your computer, and what it does not.
+order: 3
+---
+
+Sightline is free and closed source: its code is not published. So here is exactly what it does on your computer.
+
+## What it does
+
+- **It runs only inside the game.** It is a plugin in the game's own `plugins` folder, loaded by the game when it starts and gone when the game closes. Nothing is installed in Windows.
+- **It uses the game's own multi-monitor commands**, the same `multimon` commands you can type in the game's console.
+- **It writes only its own files**, in `Documents\<game>\.sightline\`, plus `sightline.ini` next to the plugin. See [Where Sightline keeps its files](../01-getting-started/03-first-steps.mdx#where-sightline-keeps-its-files).
+- **It changes your `multimon_config.sii` only when you press Save or restore a backup**, and keeps a copy of the old file every time.
+- **Deleted profiles and copies go to the Recycle Bin**, so you can get them back.
+- **To restart the game**, after you turn the multi-monitor mode on or off, it saves your progress and closes the game, and a small helper waits for the game to close, asks **Steam** to start it again and exits.
+
+## What it does not do
+
+- **No internet.** Sightline never connects to anything. The only link, to this guide on the **Settings** page, opens in your browser when you click it.
+- **No telemetry, no accounts, no data collected.**
+- **It never blocks your wheel, pedals or controllers.** While its window is open, it takes only the mouse and keyboard, and gives them back to the game when you close it.
+
+## Get it from the official page
+
+Download Sightline only from its official page, **docs.duhnunes.dev/sightline**. Copies uploaded elsewhere may have been changed.
+
+To remove it, see [Uninstalling](../01-getting-started/02-installation.mdx#uninstalling).
+
+---
+
+Sightline is an unofficial community project, not affiliated with or endorsed by SCS Software. Euro Truck Simulator 2, American Truck Simulator and SCS Software are trademarks of their respective owners.

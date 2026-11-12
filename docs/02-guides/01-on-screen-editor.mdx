@@ -21,8 +21,14 @@ Drag the **inside** of a view. It moves live, and the game follows smoothly.
 
 Drag an **edge** or a **corner**. While you drag, only the outline changes. The new size is applied when you **release** the mouse.
 
+Hold :kbd[Ctrl] to resize from the center: the opposite edge moves the same amount the other way, so the view stays centered where it is.
+
 > [!NOTE] Why only on release?
 > The game rebuilds a view's image every time its size changes, which makes it stutter for a moment. Applying the size once, on release, avoids a stutter on every mouse movement.
+
+## Remove a view
+
+Press :kbd[Delete] to remove the selected view. There is no confirmation: **Undo** (:kbd[Ctrl + Z]) brings it back, and nothing is written to your file until you press **Save**.
 
 ## Snapping
 

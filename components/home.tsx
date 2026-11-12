@@ -11,7 +11,7 @@ import { Video } from './video'
 // Paths inside the site; link() adds the deployment prefix (basePath in
 // rdx.config.ts), which plain <a> tags do not get on their own.
 const DOWNLOAD = '/download' // vercel.json: the latest release's Sightline.zip
-const VERSION = '0.3.1'
+const VERSION = '0.3.2'
 // The YouTube id of the video, once it is published. Empty: a placeholder.
 const VIDEO_ID = ''
 

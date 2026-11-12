@@ -2,6 +2,10 @@
   <img src="./public/images/icons/web-app-manifest-192x192.png" width="128" alt="Sightline logo" />
   <h1>Sightline</h1>
   <p>An in-game multi-monitor editor for American Truck Simulator and Euro Truck Simulator 2</p>
+  <p>
+    <a href="https://docs.duhnunes.dev/sightline"><img src="https://img.shields.io/github/v/release/duhnunes/sightline-releases?display_name=tag&style=for-the-badge&color=28C8FF&label=release" alt="Latest release" /></a>
+    <a href="https://docs.duhnunes.dev/sightline/docs"><img src="https://img.shields.io/badge/docs-read%20online-28C8FF?style=for-the-badge&logo=readthedocs&logoColor=white" alt="Documentation" /></a>
+  </p>
 </div>
 
 > **Unofficial community project.** Sightline is not affiliated with or endorsed by SCS Software. Euro Truck Simulator 2, American Truck Simulator and SCS Software are trademarks of their respective owners.
